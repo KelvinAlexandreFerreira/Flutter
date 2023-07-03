@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'screens/home_screen/home_screen.dart';
 
 void main() {
@@ -12,6 +13,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Simple Journal',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.grey,
+        appBarTheme: const AppBarTheme(
+          elevation: 0,
+          backgroundColor: Colors.black,
+          titleTextStyle: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+        textTheme: GoogleFonts.bitterTextTheme();
+      ),
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.light,
       initialRoute: "home",
