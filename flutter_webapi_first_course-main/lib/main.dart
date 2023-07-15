@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_webapi_first_course/models/journal.dart';
+import 'package:flutter_webapi_first_course/screens/add_journal_screen/add_journal_screen.dart';
 import 'package:flutter_webapi_first_course/services/journal_service.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'helpers/async_study.dart';
@@ -10,7 +12,7 @@ void main() {
   JournalService service = JournalService();
   service.register("Olá Mundo!");
   //service.get();
-  asyncStudy();
+  //asyncStudy();
 }
 
 class MyApp extends StatelessWidget {
@@ -28,13 +30,22 @@ class MyApp extends StatelessWidget {
             titleTextStyle: TextStyle(
               color: Colors.white,
             ),
+            actionsIconTheme: IconThemeData(color: Colors.white),
           ),
           textTheme: GoogleFonts.bitterTextTheme()),
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.light,
-      initialRoute: "home",
+      initialRoute: "add-journal",
       routes: {
         "home": (context) => const HomeScreen(),
+        "add-journal": (context) => AddJournalScreen(
+              journal: Journal(
+                id: "id",
+                content: "content",
+                createdAt: DateTime.now(),
+                updatedAt: DateTime.now(),
+              ),
+            ),
       },
     );
   }
