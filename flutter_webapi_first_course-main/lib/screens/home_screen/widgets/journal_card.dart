@@ -105,6 +105,14 @@ class JournalCard extends StatelessWidget {
           content: "",
           createdAt: showedDate,
           updatedAt: showedDate),
-    );
+    ).then((value) {
+      if (value != null && value == true) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text("Registro feito com sucesso!"),
+          ),
+        );
+      }
+    });
   }
 }
