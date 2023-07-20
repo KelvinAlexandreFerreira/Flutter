@@ -10,8 +10,8 @@ void main() {
   runApp(const MyApp());
 
   JournalService service = JournalService();
-  service.register(Journal.empty());
-  //service.get();
+  //service.register(Journal.empty());
+  service.getAll();
   //asyncStudy();
 }
 
