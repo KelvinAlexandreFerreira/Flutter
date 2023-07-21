@@ -31,7 +31,7 @@ class Journal {
   Journal.fromMap(Map<String, dynamic> map)
       : id = map["id"],
         content = map["content"],
-        createdAt = DateTime.parse(map["crated_at"]),
+        createdAt = DateTime.parse(map["created_at"]),
         updatedAt = DateTime.parse(map["updated_at"]);
 
   @override
