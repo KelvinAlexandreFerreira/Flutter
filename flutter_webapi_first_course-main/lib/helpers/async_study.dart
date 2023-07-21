@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'dart:math';
 
 asyncStudy() {
@@ -20,7 +22,7 @@ void assincronismoBasico() {
   print("\nAssincronismo Básico");
   print("01");
   print("02");
-  Future.delayed(Duration(seconds: 2), () {
+  Future.delayed(const Duration(seconds: 2), () {
     print("03");
   });
   print("04");
