@@ -6,7 +6,8 @@ import '../../models/journal.dart';
 
 class AddJournalScreen extends StatelessWidget {
   final Journal journal;
-  AddJournalScreen({super.key, required this.journal});
+  final bool isEditing;
+  AddJournalScreen({super.key, required this.journal, required this.isEditing});
 
   final TextEditingController _contentController = TextEditingController();
 
@@ -46,8 +47,15 @@ class AddJournalScreen extends StatelessWidget {
     journal.content = content;
 
     JournalService service = JournalService();
-    service.register(journal).then((value) {
-      Navigator.pop(context, value);
-    });
+
+    if (isEditing) {
+      service.register(journal).then((value) {
+        Navigator.pop(context, value);
+      });
+    } else {
+      service.edit(journal.id, journal).then((value) {
+        Navigator.pop(context, value);
+      });
+    }
   }
 }
