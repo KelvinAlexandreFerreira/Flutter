@@ -1,10 +1,11 @@
 ![Thumbnail GitHub](https://github.com/alura-cursos/flutter_webapi_first_course/raw/main/thumbnail01.png)
 
-Repositório do Curso de Flutter com Web API - Integrando sua Aplicação, da Alura. 
+Repositório do Curso de Flutter com Web API - Integrando sua Aplicação, da Alura.
 
 ## ✔️ Técnicas e tecnologias
 
 **Veja mais de perto o que você aprenderá sobre** :
+
 - `API`: O que é e como funciona uma API e sua relação com a internet;
 - `http`: O que é o Protocolo HTTP e também a Biblioteca HTTP do Dart;
 - `async/await`: Como usar o `async` e o `await` para requisições que são operações assíncronas;
@@ -21,10 +22,10 @@ O código de Flutter: Web API - Integrando sua Aplicação são **Classes** e **
 
 **Para executar este projeto você precisa:**
 
-- Ter uma IDE, que pode ser o  [Android Studio](https://developer.android.com/) instalado na sua máquina;
+- Ter uma IDE, que pode ser o [Android Studio](https://developer.android.com/) instalado na sua máquina;
 - Ter a [SDK do Flutter](https://docs.flutter.dev/get-started/install) na versão 3.0.0;
 - Ter o [Node.JS](https://nodejs.org/en/) instalado na sua máquina;
-- (A partir da branch "Aula 02")  Ter um servidor [JSON-Server](https://www.npmjs.com/package/json-server) rodando o arquivo [server/db.json] em um endereço visível ao emulador usado;
+- (A partir da branch "Aula 02") Ter um servidor [JSON-Server](https://www.npmjs.com/package/json-server) rodando o arquivo [server/db.json] em um endereço visível ao emulador usado;
 
 ## 📚 Mais informações do curso
 
@@ -38,4 +39,10 @@ Gostou do projeto e quer conhecer mais? Você pode [acessar o curso](https://cur
 
 Esse curso faz parte da [formação de Flutter da Alura](https://cursos.alura.com.br/formacao-flutter)
 
-*Te vejo lá!*
+_Te vejo lá!_
+
+Anotações Kelvin:
+
+- Comando para dar start no servidor:
+
+json-server-auth --watch --host 192.168.0.99 db.json -r routes.json

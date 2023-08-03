@@ -1,5 +1,11 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "kelvin@email.com",
+      "password": "$2a$10$2WWialuFLO2Ymwg1jX8YC.o.Y9eBGIvs.Dv.JQiCvvzf1Ts92AA4O",
+      "id": 1
+    }
+  ],
   "learnhttp": {
     "content": "Olá Mundo!"
   },
