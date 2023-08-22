@@ -65,6 +65,13 @@ class AuthService {
     String? tokenSalvo = prefs.getString("accessToken");
     print("tokenSalvo");
   }
+
+  deleteUserInfos() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.remove("accessToken");
+    prefs.remove("id");
+    prefs.remove("email");
+  }
 }
 
 class UserNotFindException implements Exception {}

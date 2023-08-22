@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter_webapi_first_course/services/auth_service.dart';
 import 'package:flutter_webapi_first_course/services/http_interceptors.dart';
 import 'package:http/http.dart' as http;
 import 'package:http_interceptor/http/intercepted_client.dart';
@@ -46,10 +47,17 @@ class JournalService {
     return false;
   }
 
-  Future<List<Journal>> getAll() async {
-    http.Response response = await client.get(Uri.parse(getUrl()));
+  Future<List<Journal>> getAll(
+      {required String id, required String token}) async {
+    http.Response response = await client.get(
+        Uri.parse("${url}users/$id/journals"),
+        headers: {"Authorization": "Bearer $token"});
 
     if (response.statusCode != 200) {
+      if (response.body.contains("jwd expired")) {
+        AuthService auth = AuthService();
+        auth.deleteUserInfos();
+      }
       throw Exception();
     }
 
