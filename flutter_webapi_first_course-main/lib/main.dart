@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_webapi_first_course/models/journal.dart';
 import 'package:flutter_webapi_first_course/screens/add_journal_screen/add_journal_screen.dart';
 import 'package:flutter_webapi_first_course/screens/login_screen/login_screen.dart';
-import 'package:flutter_webapi_first_course/services/journal_service.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'screens/home_screen/home_screen.dart';
@@ -14,11 +13,6 @@ void main() async {
   runApp(MyApp(
     islogged: isLogged,
   ));
-
-  JournalService service = JournalService();
-  //service.register(Journal.empty());
-  //service.getAll();
-  //asyncStudy();
 }
 
 Future<bool> verifyToken() async {

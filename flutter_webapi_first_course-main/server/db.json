@@ -14,6 +14,11 @@
       "email": "kelvin3@email.com",
       "password": "$2a$10$kuC4VFtVaDmQ0aIlWQ7dMeAzOo5J9N/IjEWCNsMWKT8UNkyRR/f6i",
       "id": 3
+    },
+    {
+      "email": "kelvin5@email.com",
+      "password": "$2a$10$C1aHk7QK75CMUlpMCGyltuS4dyzflpViFkOjyt10psOxZPgZZYLpu",
+      "id": 4
     }
   ],
   "learnhttp": {
@@ -59,7 +64,7 @@
       "id": "d43c0840-2da2-11ee-b2cc-f143d02a1dbb",
       "content": "Teste Add - ok",
       "created_at": "2023-08-22 19:58:33.587166",
-      "updated_at": "2023-08-22 19:58:33.587166",
+      "updated_at": "2023-08-29 19:05:12.087202",
       "userId": 1
     },
     {
@@ -103,6 +108,20 @@
       "created_at": "2023-08-20 20:28:22.438716",
       "updated_at": "2023-08-20 20:28:22.438716",
       "userId": 3
+    },
+    {
+      "id": "a5e392c0-4610-11ee-9d69-ab089f161f76",
+      "content": "Hoje é sexta ",
+      "created_at": "2023-08-18 22:06:18.464079",
+      "updated_at": "2023-08-18 22:06:18.464079",
+      "userId": 4
+    },
+    {
+      "id": "92f7e9d0-46c0-11ee-8144-5764dc62843f",
+      "content": "add 2",
+      "created_at": "2023-08-21 19:05:04.916403",
+      "updated_at": "2023-08-21 19:05:04.916403",
+      "userId": 1
     }
   ]
 }
