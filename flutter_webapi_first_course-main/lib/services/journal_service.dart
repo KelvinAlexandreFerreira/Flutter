@@ -3,17 +3,16 @@ import 'dart:io';
 
 import 'package:flutter_webapi_first_course/services/auth_service.dart';
 import 'package:flutter_webapi_first_course/services/http_interceptors.dart';
+import 'package:flutter_webapi_first_course/services/webclient.dart';
 import 'package:http/http.dart' as http;
 import 'package:http_interceptor/http/intercepted_client.dart';
 
 import '../models/journal.dart';
 
 class JournalService {
-  static const String url = "http://192.168.0.99:3000/";
+  String url = WebClient.url;
+  http.Client client = WebClient().client;
   static const String resource = "journals/";
-
-  http.Client client =
-      InterceptedClient.build(interceptors: [LoggingInterceptor()]);
 
   String getUrl() {
     return "$url$resource";
