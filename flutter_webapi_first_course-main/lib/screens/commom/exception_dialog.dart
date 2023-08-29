@@ -20,7 +20,7 @@ showExceptionDialog(
           Text(
             title,
             style: const TextStyle(
-              fontSize: 18,
+              fontSize: 17,
               color: Colors.brown,
             ),
           ),

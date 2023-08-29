@@ -9,6 +9,11 @@
       "email": "kelvin2@email.com",
       "password": "$2a$10$2WWialuFLO2Ymwg1jX8YC.o.Y9eBGIvs.Dv.JQiCvvzf1Ts92AA4O",
       "id": 2
+    },
+    {
+      "email": "kelvin3@email.com",
+      "password": "$2a$10$kuC4VFtVaDmQ0aIlWQ7dMeAzOo5J9N/IjEWCNsMWKT8UNkyRR/f6i",
+      "id": 3
     }
   ],
   "learnhttp": {
@@ -91,6 +96,13 @@
       "created_at": "2023-08-18 10:56:52.492755",
       "updated_at": "2023-08-18 10:56:52.492755",
       "userId": 2
+    },
+    {
+      "id": "f781c560-4602-11ee-a4fa-a50681816eee",
+      "content": "Teste 3",
+      "created_at": "2023-08-20 20:28:22.438716",
+      "updated_at": "2023-08-20 20:28:22.438716",
+      "userId": 3
     }
   ]
 }
