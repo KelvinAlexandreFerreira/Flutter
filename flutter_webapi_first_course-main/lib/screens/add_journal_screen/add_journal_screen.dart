@@ -1,9 +1,13 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_webapi_first_course/helpers/weekday.dart';
 import 'package:flutter_webapi_first_course/services/journal_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../helpers/logout.dart';
 import '../../models/journal.dart';
+import '../commom/exception_dialog.dart';
 
 class AddJournalScreen extends StatelessWidget {
   final Journal journal;
@@ -43,25 +47,53 @@ class AddJournalScreen extends StatelessWidget {
   }
 
   registerJournal(BuildContext context) {
-    SharedPreferences.getInstance().then((prefs) {
-      String? token = prefs.getString("accessToken");
-      if (token != null) {
-        String content = _contentController.text;
+    SharedPreferences.getInstance().then(
+      (prefs) {
+        String? token = prefs.getString("accessToken");
+        if (token != null) {
+          String content = _contentController.text;
 
-        journal.content = content;
+          journal.content = content;
 
-        JournalService service = JournalService();
+          JournalService service = JournalService();
 
-        if (isEditing) {
-          service.register(journal, token).then((value) {
-            Navigator.pop(context, value);
-          });
-        } else {
-          service.edit(journal.id, journal, token).then((value) {
-            Navigator.pop(context, value);
-          });
+          if (isEditing) {
+            service.register(journal, token).then(
+              (value) {
+                Navigator.pop(context, value);
+              },
+            ).catchError(
+              (error) {
+                logout(context);
+              },
+              test: (error) => error is TokenNotValidException,
+            ).catchError(
+              (error) {
+                var innerException = error as HttpException;
+                showExceptionDialog(context, content: innerException.message);
+              },
+              test: (error) => error is HttpException,
+            );
+          } else {
+            service.edit(journal.id, journal, token).then(
+              (value) {
+                Navigator.pop(context, value);
+              },
+            ).catchError(
+              (error) {
+                logout(context);
+              },
+              test: (error) => error is TokenNotValidException,
+            ).catchError(
+              (error) {
+                var innerException = error as HttpException;
+                showExceptionDialog(context, content: innerException.message);
+              },
+              test: (error) => error is HttpException,
+            );
+          }
         }
-      }
-    });
+      },
+    );
   }
 }
