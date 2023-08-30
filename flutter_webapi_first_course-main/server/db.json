@@ -1,4 +1,26 @@
 {
+  "users": [
+    {
+      "email": "kelvin@email.com",
+      "password": "$2a$10$2WWialuFLO2Ymwg1jX8YC.o.Y9eBGIvs.Dv.JQiCvvzf1Ts92AA4O",
+      "id": 1
+    },
+    {
+      "email": "kelvin2@email.com",
+      "password": "$2a$10$2WWialuFLO2Ymwg1jX8YC.o.Y9eBGIvs.Dv.JQiCvvzf1Ts92AA4O",
+      "id": 2
+    },
+    {
+      "email": "kelvin3@email.com",
+      "password": "$2a$10$kuC4VFtVaDmQ0aIlWQ7dMeAzOo5J9N/IjEWCNsMWKT8UNkyRR/f6i",
+      "id": 3
+    },
+    {
+      "email": "kelvin5@email.com",
+      "password": "$2a$10$C1aHk7QK75CMUlpMCGyltuS4dyzflpViFkOjyt10psOxZPgZZYLpu",
+      "id": 4
+    }
+  ],
   "learnhttp": {
     "content": "Olá Mundo!"
   },
@@ -7,31 +29,99 @@
       "id": "46827e30-2753-11ee-9580-01f12ad74883",
       "content": "Hoje é quarta feira 😃",
       "created_at": "2023-07-12 19:14:56.841881",
-      "updated_at": "2023-07-12 19:14:56.841881"
+      "updated_at": "2023-07-12 19:14:56.841881",
+      "userId": 1
     },
     {
       "id": "72cc6230-2753-11ee-8e00-0d0bed039245",
       "content": "Teste",
       "created_at": "2023-07-10 19:16:18.257315",
-      "updated_at": "2023-07-10 19:16:18.257315"
+      "updated_at": "2023-07-10 19:16:18.257315",
+      "userId": 2
     },
     {
       "id": "28fc7080-2755-11ee-ae24-f9ba5778e29b",
       "content": "Hoje choveu a tarde toda 🙄",
       "created_at": "2023-07-13 19:25:19.481710",
-      "updated_at": "2023-07-13 19:25:19.481710"
+      "updated_at": "2023-07-13 19:25:19.481710",
+      "userId": 1
     },
     {
       "id": "aac5b3c0-2759-11ee-ae24-f9ba5778e29b",
       "content": "oo9ooo",
       "created_at": "2023-07-14 19:25:19.481710",
-      "updated_at": "2023-07-14 19:25:19.481710"
+      "updated_at": "2023-07-14 19:25:19.481710",
+      "userId": 1
     },
     {
       "id": "a633ef40-275c-11ee-ac67-03560589e39b",
-      "content": "Hoje terminei o curso de web api",
+      "content": "Hoje terminei o curso de web api. Edit teste",
       "created_at": "2023-07-20 20:21:56.016091",
-      "updated_at": "2023-07-20 20:21:56.016091"
+      "updated_at": "2023-07-20 20:21:56.016091",
+      "userId": 2
+    },
+    {
+      "id": "d43c0840-2da2-11ee-b2cc-f143d02a1dbb",
+      "content": "Teste Add - ok",
+      "created_at": "2023-08-22 19:58:33.587166",
+      "updated_at": "2023-08-29 19:05:12.087202",
+      "userId": 1
+    },
+    {
+      "id": "f70de3f0-30c4-11ee-b7a0-1f18bbb3ae02",
+      "content": "Hoje é domingo! Né?",
+      "created_at": "2023-07-23 19:35:53.074515",
+      "updated_at": "2023-07-23 19:35:53.074515",
+      "userId": 2
+    },
+    {
+      "id": "a9854850-30cc-11ee-b7a0-1f18bbb3ae02",
+      "content": "Teste 2",
+      "created_at": "2023-07-25 19:35:53.074515",
+      "updated_at": "2023-07-25 19:35:53.074515",
+      "userId": 2
+    },
+    {
+      "id": "1e5ce230-4420-11ee-a7d5-495649a34e96",
+      "content": "Blz, ainda funciona ",
+      "created_at": "2023-08-24 10:51:58.230724",
+      "updated_at": "2023-08-24 10:51:58.230724",
+      "userId": 1
+    },
+    {
+      "id": "ccd18730-4420-11ee-98fa-831531625e33",
+      "content": "Teste 2",
+      "created_at": "2023-08-17 10:56:52.492755",
+      "updated_at": "2023-08-17 10:56:52.492755",
+      "userId": 2
+    },
+    {
+      "id": "d19fff30-4420-11ee-98fa-831531625e33",
+      "content": "Teste user 2",
+      "created_at": "2023-08-18 10:56:52.492755",
+      "updated_at": "2023-08-18 10:56:52.492755",
+      "userId": 2
+    },
+    {
+      "id": "f781c560-4602-11ee-a4fa-a50681816eee",
+      "content": "Teste 3",
+      "created_at": "2023-08-20 20:28:22.438716",
+      "updated_at": "2023-08-20 20:28:22.438716",
+      "userId": 3
+    },
+    {
+      "id": "a5e392c0-4610-11ee-9d69-ab089f161f76",
+      "content": "Hoje é sexta ",
+      "created_at": "2023-08-18 22:06:18.464079",
+      "updated_at": "2023-08-18 22:06:18.464079",
+      "userId": 4
+    },
+    {
+      "id": "92f7e9d0-46c0-11ee-8144-5764dc62843f",
+      "content": "add 2",
+      "created_at": "2023-08-21 19:05:04.916403",
+      "updated_at": "2023-08-21 19:05:04.916403",
+      "userId": 1
     }
   ]
 }

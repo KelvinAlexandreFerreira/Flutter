@@ -1,5 +1,3 @@
-import 'package:flutter_webapi_first_course/models/journal.dart';
-
 /// Gera dia da semana em português
 class WeekDay {
   DateTime date;
