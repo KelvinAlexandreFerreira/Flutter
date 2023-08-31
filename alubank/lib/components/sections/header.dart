@@ -6,15 +6,18 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Row(children: <Widget>[
-        Column(
+      child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Text('\$1000.00'),
-            Text('Balanço disponível'),
-          ],
-        ),
-        Icon(Icons.account_circle),
-      ]),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text('\$1000.00'),
+                Text('Balanço disponível'),
+              ],
+            ),
+            Icon(Icons.account_circle),
+          ]),
     );
   }
 }
