@@ -14,11 +14,17 @@ class Header extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(
-                    '\$1000.00',
-                    style: TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
+                  Text.rich(
+                    TextSpan(
+                      text: '\$',
+                      style: TextStyle(fontSize: 16),
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: '1000.00',
+                          style: TextStyle(
+                              fontSize: 28, fontWeight: FontWeight.bold),
+                        ),
+                      ],
                     ),
                   ),
                   Text(
