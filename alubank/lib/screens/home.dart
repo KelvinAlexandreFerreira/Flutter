@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../components/box_card.dart';
 import '../components/color_dot.dart';
+import '../components/content_division.dart';
 import '../components/sections/header.dart';
 
 class Home extends StatelessWidget {
@@ -14,8 +15,7 @@ class Home extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Header(),
-          BoxCard(
-              boxContent: ColorDot(color: ThemeColors.recentActivity['spent'])),
+          BoxCard(boxContent: ContentDivision()),
         ],
       ),
     );
