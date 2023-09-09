@@ -65,7 +65,7 @@ class _AccountActionsContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 70,
+      width: 72,
       child: Column(
         children: [
           Padding(
