@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import '../components/box_card.dart';
 import '../components/color_dot.dart';
 import '../components/content_division.dart';
+import '../components/sections/account_points.dart';
 import '../components/sections/header.dart';
 
 class Home extends StatelessWidget {
@@ -14,12 +15,15 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: <Widget>[
-          Header(),
-          RecentActivity(),
-          AccountActions(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Header(),
+            RecentActivity(),
+            AccountActions(),
+            AccountPoints(),
+          ],
+        ),
       ),
     );
   }
