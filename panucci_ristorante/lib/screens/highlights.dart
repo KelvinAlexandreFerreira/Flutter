@@ -10,16 +10,21 @@ class Highlights extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16.0),
-      child: ListView.builder(
-        itemBuilder: (context, index) {
-          return HighlightItem(
-            imageURI: items[index]["image"],
-            itemTitle: items[index]["name"],
-            itemPrice: items[index]["price"],
-            itemDescription: items[index]["description"],
-          );
-        },
-        itemCount: items.length,
+      child: Column(
+        children: [
+          Text("Destaques"),
+          ListView.builder(
+            itemBuilder: (context, index) {
+              return HighlightItem(
+                imageURI: items[index]["image"],
+                itemTitle: items[index]["name"],
+                itemPrice: items[index]["price"],
+                itemDescription: items[index]["description"],
+              );
+            },
+            itemCount: items.length,
+          ),
+        ],
       ),
     );
   }
