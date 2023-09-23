@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:panucci_ristorante/components/highlight_item.dart';
 
 import '../cardapio.dart';
+import '../components/page_title.dart';
 
 class Highlights extends StatelessWidget {
   const Highlights({super.key});
@@ -12,15 +13,8 @@ class Highlights extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
       child: CustomScrollView(
         slivers: <Widget>[
-          const SliverToBoxAdapter(
-            child: Padding(
-              padding: EdgeInsets.only(bottom: 16.0),
-              child: Text(
-                "Destaques",
-                style: TextStyle(fontFamily: "Caveat", fontSize: 32),
-                textAlign: TextAlign.center,
-              ),
-            ),
+          const PageTitle(
+            title: 'Destaques',
           ),
           SliverList(
             delegate: SliverChildBuilderDelegate((context, index) {
