@@ -13,16 +13,19 @@ class Highlights extends StatelessWidget {
       child: Column(
         children: [
           Text("Destaques"),
-          ListView.builder(
-            itemBuilder: (context, index) {
-              return HighlightItem(
-                imageURI: items[index]["image"],
-                itemTitle: items[index]["name"],
-                itemPrice: items[index]["price"],
-                itemDescription: items[index]["description"],
-              );
-            },
-            itemCount: items.length,
+          SizedBox(
+            height: MediaQuery.of(context).size.height,
+            child: ListView.builder(
+              itemBuilder: (context, index) {
+                return HighlightItem(
+                  imageURI: items[index]["image"],
+                  itemTitle: items[index]["name"],
+                  itemPrice: items[index]["price"],
+                  itemDescription: items[index]["description"],
+                );
+              },
+              itemCount: items.length,
+            ),
           ),
         ],
       ),
