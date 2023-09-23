@@ -3,6 +3,8 @@ import 'package:panucci_ristorante/components/main_drawer.dart';
 import 'package:panucci_ristorante/screens/highlights.dart';
 import 'package:panucci_ristorante/themes/app_colors.dart';
 
+import 'food_menu.dart';
+
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -14,6 +16,7 @@ class _HomeState extends State<Home> {
   int _currentPage = 0;
   @override
   Widget build(BuildContext context) {
+    final List<Widget> pages = [Highlights(), FoodMenu()];
     return Scaffold(
       appBar: AppBar(
         title: const Text("Ristorante Panucci"),
@@ -61,7 +64,7 @@ class _HomeState extends State<Home> {
           });
         },
       ),
-      body: Highlights(),
+      body: pages.elementAt(_currentPage),
     );
   }
 }
