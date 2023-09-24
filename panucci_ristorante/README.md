@@ -14,3 +14,5 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+Figma: https://www.figma.com/file/NUkj8R3K3m19OhZD9x4Xwo/Ristorante-Panucci?node-id=20%3A5007&mode=dev
