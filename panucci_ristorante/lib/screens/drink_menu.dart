@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:panucci_ristorante/cardapio.dart';
 import 'package:panucci_ristorante/components/drink_item.dart';
 
-import '../components/page_title.dart';
+import '../components/title.dart';
 
 class DrinkMenu extends StatelessWidget {
   const DrinkMenu({super.key});

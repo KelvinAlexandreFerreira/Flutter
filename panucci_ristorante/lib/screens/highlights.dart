@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:panucci_ristorante/components/highlight_item.dart';
 
 import '../cardapio.dart';
-import '../components/page_title.dart';
+import '../components/title.dart';
 
 class Highlights extends StatelessWidget {
   const Highlights({super.key});

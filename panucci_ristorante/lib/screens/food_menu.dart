@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:panucci_ristorante/cardapio.dart';
-import 'package:panucci_ristorante/components/page_title.dart';
+import 'package:panucci_ristorante/components/title.dart';
 
 import '../components/food_item.dart';
 
