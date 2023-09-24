@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:panucci_ristorante/cardapio.dart';
 import 'package:panucci_ristorante/components/order_item.dart';
+import 'package:panucci_ristorante/components/payment_method.dart';
+import 'package:panucci_ristorante/components/payment_total.dart';
 
 import '../components/main_drawer.dart';
+import '../components/title.dart';
 
 class Checkout extends StatelessWidget {
   const Checkout({super.key});
@@ -30,15 +33,7 @@ class Checkout extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: CustomScrollView(
           slivers: <Widget>[
-            const SliverToBoxAdapter(
-              child: Padding(
-                padding: EdgeInsets.only(bottom: 8.0),
-                child: Text(
-                  "Pedido",
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
-                ),
-              ),
-            ),
+            const CheckoutTitle(text: 'Pedido'),
             SliverList(
               delegate: SliverChildBuilderDelegate(
                 (context, index) {
@@ -50,6 +45,14 @@ class Checkout extends StatelessWidget {
                 },
                 childCount: items.length,
               ),
+            ),
+            const CheckoutTitle(text: 'Pagamento'),
+            const SliverToBoxAdapter(
+              child: PaymentMethod(),
+            ),
+            const CheckoutTitle(text: 'Confirmar'),
+            const SliverToBoxAdapter(
+              child: PaymentTotal(),
             ),
           ],
         ),
