@@ -14,6 +14,34 @@ void main() {
           ),
         ),
       );
+      final spentFinder = find.text('Spent');
+      expect(spentFinder, findsOneWidget);
+    },
+  );
+  testWidgets(
+    'Finds a LinearProgressIndicator',
+    (widgetTester) async {
+      await widgetTester.pumpWidget(
+        MaterialApp(
+          home: BankInherited(
+            child: Home(),
+          ),
+        ),
+      );
+      expect(find.byType(LinearProgressIndicator), findsOneWidget);
+    },
+  );
+  testWidgets(
+    'Finds a AccountStatus',
+    (widgetTester) async {
+      await widgetTester.pumpWidget(
+        MaterialApp(
+          home: BankInherited(
+            child: Home(),
+          ),
+        ),
+      );
+      expect(find.byKey(const Key('textKey')), findsOneWidget);
     },
   );
 }
