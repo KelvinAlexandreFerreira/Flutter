@@ -59,7 +59,7 @@ class _HeaderState extends State<Header> {
                     ],
                   ),
                   FutureBuilder(
-                      future: BankHttp().dolarToReal(),
+                      future: MockBankHttp().dolarToReal(),
                       builder: (context, snapshot) {
                         switch (snapshot.connectionState) {
                           case ConnectionState.none:
