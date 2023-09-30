@@ -1,4 +1,5 @@
 import 'package:estilizacao_componentes/components/box_card.dart';
+import 'package:estilizacao_componentes/data/bank_http.mocks.dart';
 import 'package:estilizacao_componentes/data/bank_inherited.dart';
 import 'package:estilizacao_componentes/screens/home.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +12,9 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: BankInherited(
-            child: Home(),
+            child: Home(
+              api: MockBankHttp().dolarToReal(),
+            ),
           ),
         ),
       );
@@ -25,7 +28,9 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: BankInherited(
-            child: Home(),
+            child: Home(
+              api: MockBankHttp().dolarToReal(),
+            ),
           ),
         ),
       );
@@ -38,7 +43,9 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: BankInherited(
-            child: Home(),
+            child: Home(
+              api: MockBankHttp().dolarToReal(),
+            ),
           ),
         ),
       );
@@ -50,7 +57,9 @@ void main() {
     await tester.pumpWidget(
       MaterialApp(
         home: BankInherited(
-          child: Home(),
+          child: Home(
+            api: MockBankHttp().dolarToReal(),
+          ),
         ),
       ),
     );
@@ -67,7 +76,9 @@ void main() {
     await tester.pumpWidget(
       MaterialApp(
         home: BankInherited(
-          child: Home(),
+          child: Home(
+            api: MockBankHttp().dolarToReal(),
+          ),
         ),
       ),
     );
