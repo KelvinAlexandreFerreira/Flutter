@@ -42,7 +42,7 @@ void main() {
           ),
         ),
       );
-      expect(find.byKey(const Key('textKey')), findsOneWidget);
+      expect(find.byKey(const Key('testKey')), findsOneWidget);
     },
   );
 
