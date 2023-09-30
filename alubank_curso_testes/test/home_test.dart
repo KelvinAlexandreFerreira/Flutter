@@ -21,8 +21,8 @@ void main() {
   );
   testWidgets(
     'Finds a LinearProgressIndicator',
-    (widgetTester) async {
-      await widgetTester.pumpWidget(
+    (tester) async {
+      await tester.pumpWidget(
         MaterialApp(
           home: BankInherited(
             child: Home(),
@@ -34,8 +34,8 @@ void main() {
   );
   testWidgets(
     'Finds a AccountStatus',
-    (widgetTester) async {
-      await widgetTester.pumpWidget(
+    (tester) async {
+      await tester.pumpWidget(
         MaterialApp(
           home: BankInherited(
             child: Home(),
