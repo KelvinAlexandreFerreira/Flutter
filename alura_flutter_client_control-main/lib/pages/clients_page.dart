@@ -128,17 +128,15 @@ class _ClientsPageState extends State<ClientsPage> {
               ),
             ),
             actions: [
-              Consumer(
+              Consumer<Clients>(
                 builder: (BuildContext context, Clients list, Widget? widget) {
                   return TextButton(
                       child: const Text("Salvar"),
                       onPressed: () async {
-                        setState(() {
-                          list.clients.add(Client(
-                              name: nomeInput.text,
-                              email: emailInput.text,
-                              type: dropdownValue));
-                        });
+                        list.clients.add(Client(
+                            name: nomeInput.text,
+                            email: emailInput.text,
+                            type: dropdownValue));
                         Navigator.pop(context);
                       });
                 },
