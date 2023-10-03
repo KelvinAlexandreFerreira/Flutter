@@ -1,3 +1,5 @@
+import 'package:client_control/models/client.dart';
+import 'package:client_control/models/client_type.dart';
 import 'package:client_control/models/clients.dart';
 import 'package:client_control/pages/client_types_page.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +8,13 @@ import 'package:provider/provider.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(
-      create: (context) => Clients(clients: []), child: const MyApp()));
+      create: (context) => Clients(clients: [
+            Client(
+                name: 'Geraldo',
+                email: 'leo@email.com',
+                type: ClientType(name: 'Platinum', icon: Icons.credit_card)),
+          ]),
+      child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
