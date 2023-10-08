@@ -46,5 +46,21 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('Ferro'), findsOneWidget);
     expect(find.byIcon(Icons.card_giftcard), findsOneWidget);
+
+    //Testando Novo Cliente
+    await tester.tap(find.byIcon(Icons.menu));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Gerenciar clientes'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byType(FloatingActionButton));
+    await tester.pumpAndSettle();
+    await tester.enterText(find.byType(TextFormField), 'DandaraBot');
+    await tester.enterText(find.byType(TextFormField), 'dandara@bot.com.br');
+    await tester.tap(find.byIcon(Icons.arrow_downward));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Ferro'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Salvar'));
+    await tester.pumpAndSettle();
   });
 }
