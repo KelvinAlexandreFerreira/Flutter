@@ -32,5 +32,19 @@ void main() {
     expect(find.text('Golden'), findsOneWidget);
     expect(find.text('Titanium'), findsOneWidget);
     expect(find.text('Diamond'), findsOneWidget);
+
+    //Testar a criação de um novo tipo de cliente
+    await tester.tap(find.byType(FloatingActionButton));
+    await tester.pumpAndSettle();
+    expect(find.byType(AlertDialog), findsOneWidget);
+    await tester.enterText(find.byType(TextFormField), 'Ferro');
+    await tester.tap(find.text('Selecionar icone'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byIcon(Icons.card_giftcard));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Salvar'));
+    await tester.pumpAndSettle();
+    expect(find.text('Ferro'), findsOneWidget);
+    expect(find.byIcon(Icons.card_giftcard), findsOneWidget);
   });
 }
