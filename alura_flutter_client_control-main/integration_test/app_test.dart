@@ -54,11 +54,11 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(find.byType(FloatingActionButton));
     await tester.pumpAndSettle();
-    await tester.enterText(find.byType(TextFormField), 'DandaraBot');
-    await tester.enterText(find.byType(TextFormField), 'dandara@bot.com.br');
+    await tester.enterText(find.byKey(Key('NameKey1')), 'DandaraBot');
+    await tester.enterText(find.byKey(Key('EmailKey1')), 'dandara@bot.com.br');
     await tester.tap(find.byIcon(Icons.arrow_downward));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Ferro'));
+    await tester.tap(find.text('Ferro').last);
     await tester.pumpAndSettle();
     await tester.tap(find.text('Salvar'));
     await tester.pumpAndSettle();
