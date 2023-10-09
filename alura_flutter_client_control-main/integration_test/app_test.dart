@@ -11,7 +11,7 @@ void main() {
 
   testWidgets('Integration Teste', (tester) async {
     final providerKey = GlobalKey();
-    app.main([], providerKey);
+    app.main(list: [], providerKey: providerKey);
     //Testando a tela inicial
     await tester.pumpAndSettle();
     expect(find.text('Clientes'), findsOneWidget);
