@@ -1,7 +1,10 @@
+import 'package:client_control/models/clients.dart';
+import 'package:client_control/models/types.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:client_control/main.dart' as app;
+import 'package:provider/provider.dart';
 
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
@@ -46,6 +49,8 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('Ferro'), findsOneWidget);
     expect(find.byIcon(Icons.card_giftcard), findsOneWidget);
+    expect(Provider.of<Types>(context).types.last.name, 'Ferro');
+    expect(Provider.of<Types>(context).types.last.icon, Icons.card_giftcard);
 
     //Testando Novo Cliente
     await tester.tap(find.byIcon(Icons.menu));
@@ -62,5 +67,12 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(find.text('Salvar'));
     await tester.pumpAndSettle();
+
+    //Verificando se o cliente apareceu devidamente
+    expect(find.text('DandaraBot (Ferro)'), findsOneWidget);
+    expect(find.byIcon(Icons.card_giftcard), findsOneWidget);
+    expect(Provider.of<Clients>(context).clients.last.name, 'DandaraBot');
+    expect(
+        Provider.of<Clients>(context).clients.last.email, 'dandara@bot.com.br');
   });
 }
