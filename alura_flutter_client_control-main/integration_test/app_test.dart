@@ -10,7 +10,8 @@ void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
   testWidgets('Integration Teste', (tester) async {
-    app.main();
+    final providerKey = GlobalKey();
+    app.main([], providerKey);
     //Testando a tela inicial
     await tester.pumpAndSettle();
     expect(find.text('Clientes'), findsOneWidget);
@@ -49,8 +50,18 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('Ferro'), findsOneWidget);
     expect(find.byIcon(Icons.card_giftcard), findsOneWidget);
-    expect(Provider.of<Types>(context).types.last.name, 'Ferro');
-    expect(Provider.of<Types>(context).types.last.icon, Icons.card_giftcard);
+    expect(
+        Provider.of<Types>(providerKey.currentContext!, listen: false)
+            .types
+            .last
+            .name,
+        'Ferro');
+    expect(
+        Provider.of<Types>(providerKey.currentContext!, listen: false)
+            .types
+            .last
+            .icon,
+        Icons.card_giftcard);
 
     //Testando Novo Cliente
     await tester.tap(find.byIcon(Icons.menu));
@@ -71,8 +82,17 @@ void main() {
     //Verificando se o cliente apareceu devidamente
     expect(find.text('DandaraBot (Ferro)'), findsOneWidget);
     expect(find.byIcon(Icons.card_giftcard), findsOneWidget);
-    expect(Provider.of<Clients>(context).clients.last.name, 'DandaraBot');
     expect(
-        Provider.of<Clients>(context).clients.last.email, 'dandara@bot.com.br');
+        Provider.of<Clients>(providerKey.currentContext!, listen: false)
+            .clients
+            .last
+            .name,
+        'DandaraBot');
+    expect(
+        Provider.of<Clients>(providerKey.currentContext!, listen: false)
+            .clients
+            .last
+            .email,
+        'dandara@bot.com.br');
   });
 }

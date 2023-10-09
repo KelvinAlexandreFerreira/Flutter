@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'pages/clients_page.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main(List<String> list, Key providerKey) {
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (context) => Clients(clients: [])),
@@ -18,7 +18,9 @@ void main() {
                 ClientType(name: 'Diamond', icon: Icons.diamond),
               ]))
     ],
-    child: const MyApp(),
+    child: MyApp(
+      key: providerKey,
+    ),
   ));
 }
 
